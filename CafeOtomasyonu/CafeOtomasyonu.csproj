@@ -8,8 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
-
 </Project>
