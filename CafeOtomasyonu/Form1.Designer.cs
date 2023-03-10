@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnKategori = new Button();
             SuspendLayout();
+            // 
+            // btnKategori
+            // 
+            btnKategori.Location = new Point(292, 366);
+            btnKategori.Name = "btnKategori";
+            btnKategori.Size = new Size(75, 23);
+            btnKategori.TabIndex = 0;
+            btnKategori.Text = "Kategori";
+            btnKategori.UseVisualStyleBackColor = true;
+            btnKategori.Click += btnKategori_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(713, 498);
+            Controls.Add(btnKategori);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnKategori;
     }
 }

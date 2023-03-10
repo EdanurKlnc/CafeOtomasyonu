@@ -1,7 +1,7 @@
 ﻿
 namespace CafeOtomasyonu;
 
-public class Urun
+public class Urun :BaseModel
 {
     public string Ad { get; set; }
     public string Fiyat { get; set; }

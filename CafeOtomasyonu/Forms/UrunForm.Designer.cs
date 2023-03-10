@@ -37,6 +37,8 @@
             btnKaydet = new Button();
             btnGuncelle = new Button();
             lstUrun = new ListBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblKategori
@@ -90,18 +92,19 @@
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(115, 255);
+            btnKaydet.Location = new Point(120, 376);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(92, 45);
+            btnKaydet.Size = new Size(87, 67);
             btnKaydet.TabIndex = 5;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // btnGuncelle
             // 
-            btnGuncelle.Location = new Point(213, 255);
+            btnGuncelle.Location = new Point(218, 376);
             btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(89, 45);
+            btnGuncelle.Size = new Size(84, 67);
             btnGuncelle.TabIndex = 5;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
@@ -115,11 +118,21 @@
             lstUrun.Size = new Size(202, 409);
             lstUrun.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.IndianRed;
+            pictureBox1.Location = new Point(131, 179);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(171, 180);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 512);
+            Controls.Add(pictureBox1);
             Controls.Add(lstUrun);
             Controls.Add(btnGuncelle);
             Controls.Add(btnKaydet);
@@ -131,6 +144,7 @@
             Controls.Add(lblKategori);
             Name = "UrunForm";
             Text = "UrunForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,5 +160,6 @@
         private Button btnKaydet;
         private Button btnGuncelle;
         private ListBox lstUrun;
+        private PictureBox pictureBox1;
     }
 }
