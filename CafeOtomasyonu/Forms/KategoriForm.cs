@@ -69,5 +69,10 @@ namespace CafeOtomasyonu.Forms
                 throw;
             }
         }
+
+        private void KategoriForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

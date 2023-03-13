@@ -144,6 +144,7 @@
             Controls.Add(lblKategori);
             Name = "UrunForm";
             Text = "UrunForm";
+            Load += UrunForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
