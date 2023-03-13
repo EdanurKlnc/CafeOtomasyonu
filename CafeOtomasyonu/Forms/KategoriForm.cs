@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using CafeOtomasyonu.Data;
+using CafeOtomasyonu.Helpers;
 
 namespace CafeOtomasyonu.Forms
 {
@@ -26,9 +19,9 @@ namespace CafeOtomasyonu.Forms
                 {
                     Ad = txtAd.Text
                 };
-                Kategoriler.Add(kategori);
+                DataContext.Kategoriler.Add(kategori);
                 lstKategori.DataSource = null;
-                lstKategori.DataSource = Kategoriler;
+                lstKategori.DataSource = DataContext.Kategoriler;
 
             }
             catch (Exception ex)
@@ -61,7 +54,7 @@ namespace CafeOtomasyonu.Forms
             {
                 seciliKategori.Ad = txtAd.Text;
                 lstKategori.DataSource = null;
-                lstKategori.DataSource = Kategoriler;
+                lstKategori.DataSource = DataContext.Kategoriler;
 
             }
             catch
@@ -69,10 +62,10 @@ namespace CafeOtomasyonu.Forms
                 throw;
             }
         }
-
+        public EnvanterContext DataContext { get; set; }
         private void KategoriForm_Load(object sender, EventArgs e)
         {
-
+            lstKategori.DataSource = DataContext.Kategoriler;
         }
     }
 }

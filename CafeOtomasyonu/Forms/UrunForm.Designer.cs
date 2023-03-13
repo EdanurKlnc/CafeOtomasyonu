@@ -31,7 +31,7 @@
             lblKategori = new Label();
             label1 = new Label();
             cmbKategori = new ComboBox();
-            textBox1 = new TextBox();
+            txtAd = new TextBox();
             label2 = new Label();
             txtFiyat = new TextBox();
             btnKaydet = new Button();
@@ -67,12 +67,12 @@
             cmbKategori.Size = new Size(166, 23);
             cmbKategori.TabIndex = 1;
             // 
-            // textBox1
+            // txtAd
             // 
-            textBox1.Location = new Point(136, 76);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(166, 23);
-            textBox1.TabIndex = 2;
+            txtAd.Location = new Point(136, 76);
+            txtAd.Name = "txtAd";
+            txtAd.Size = new Size(166, 23);
+            txtAd.TabIndex = 2;
             // 
             // label2
             // 
@@ -108,6 +108,7 @@
             btnGuncelle.TabIndex = 5;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // lstUrun
             // 
@@ -117,6 +118,7 @@
             lstUrun.Name = "lstUrun";
             lstUrun.Size = new Size(202, 409);
             lstUrun.TabIndex = 6;
+            lstUrun.SelectedIndexChanged += lstUrun_SelectedIndexChanged;
             // 
             // pictureBox1
             // 
@@ -138,7 +140,7 @@
             Controls.Add(btnKaydet);
             Controls.Add(txtFiyat);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtAd);
             Controls.Add(cmbKategori);
             Controls.Add(label1);
             Controls.Add(lblKategori);
@@ -155,7 +157,7 @@
         private Label lblKategori;
         private Label label1;
         private ComboBox cmbKategori;
-        private TextBox textBox1;
+        private TextBox txtAd;
         private Label label2;
         private TextBox txtFiyat;
         private Button btnKaydet;

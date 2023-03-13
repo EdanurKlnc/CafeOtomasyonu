@@ -92,6 +92,7 @@
             Controls.Add(txtbxKatBilgi);
             Name = "KatBilgisi";
             Text = "KatBilgisi";
+            Load += KatBilgisi_Load;
             flw1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

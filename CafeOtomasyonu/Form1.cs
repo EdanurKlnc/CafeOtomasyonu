@@ -1,4 +1,6 @@
+using CafeOtomasyonu.Data;
 using CafeOtomasyonu.Forms;
+using CafeOtomasyonu.Helpers;
 
 namespace CafeOtomasyonu
 {
@@ -8,13 +10,21 @@ namespace CafeOtomasyonu
         {
             InitializeComponent();
         }
+        private KategoriForm _kategoriForm;
+        private UrunForm _urunForm;
+        private EnvanterContext _dataContext;
 
 
         private void btnKategori_Click(object sender, EventArgs e)
         {
-            KategoriForm kategoriForm = new KategoriForm();
-            kategoriForm.Show();
-           // this.Hide();
+           
+            if(_kategoriForm==null || _kategoriForm.IsDisposed)
+            {
+                _kategoriForm = new KategoriForm();
+                _kategoriForm.Text = "Kategori Sayfasý";
+                _kategoriForm.DataContext = _dataContext;
+                _kategoriForm.Show();
+            }
         }
 
         private void btnKat_Click(object sender, EventArgs e)
@@ -26,15 +36,20 @@ namespace CafeOtomasyonu
 
         private void btnUrunler_Click(object sender, EventArgs e)
         {
-            UrunForm urunForm = new UrunForm();
-            urunForm.Show();
-            this.Hide();
+            if (_urunForm == null || _urunForm.IsDisposed)
+            {
+                _urunForm = new UrunForm();
+                _urunForm.Text = "Kategori Sayfasý";
+                _urunForm.DataContext = _dataContext;
+                _urunForm.Show();
+            }
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            var data = DataHelper.Load();
+            _dataContext = data ?? new();
         }
 
         //if (_kategoriForm == null || _kategoriForm.IsDisposed)
