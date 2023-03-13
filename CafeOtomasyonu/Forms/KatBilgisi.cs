@@ -40,5 +40,10 @@
             this.Text = basilanButon.Text;
 
         }
+
+        private void KatBilgisi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
