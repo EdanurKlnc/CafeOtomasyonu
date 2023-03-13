@@ -17,8 +17,8 @@ namespace CafeOtomasyonu
 
         private void btnKategori_Click(object sender, EventArgs e)
         {
-           
-            if(_kategoriForm==null || _kategoriForm.IsDisposed)
+
+            if (_kategoriForm == null || _kategoriForm.IsDisposed)
             {
                 _kategoriForm = new KategoriForm();
                 _kategoriForm.Text = "Kategori Sayfasý";
@@ -52,6 +52,7 @@ namespace CafeOtomasyonu
             _dataContext = data ?? new();
         }
 
+       
         //if (_kategoriForm == null || _kategoriForm.IsDisposed)
         //{
         //    _kategoriForm = new KategoriForm();

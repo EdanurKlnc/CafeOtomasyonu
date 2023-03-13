@@ -22,6 +22,8 @@ namespace CafeOtomasyonu.Forms
                 DataContext.Kategoriler.Add(kategori);
                 lstKategori.DataSource = null;
                 lstKategori.DataSource = DataContext.Kategoriler;
+                DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
 
             }
             catch (Exception ex)
@@ -55,6 +57,8 @@ namespace CafeOtomasyonu.Forms
                 seciliKategori.Ad = txtAd.Text;
                 lstKategori.DataSource = null;
                 lstKategori.DataSource = DataContext.Kategoriler;
+                DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
 
             }
             catch

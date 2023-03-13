@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblKategori = new Label();
             label1 = new Label();
             cmbKategori = new ComboBox();
@@ -37,8 +38,13 @@
             btnKaydet = new Button();
             btnGuncelle = new Button();
             lstUrun = new ListBox();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            cmsSil = new ContextMenuStrip(components);
+            silToolStripMenuItem = new ToolStripMenuItem();
+            pcFoto = new PictureBox();
+            dosyaAc = new OpenFileDialog();
+            dosyaKaydet = new SaveFileDialog();
+            cmsSil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcFoto).BeginInit();
             SuspendLayout();
             // 
             // lblKategori
@@ -112,6 +118,7 @@
             // 
             // lstUrun
             // 
+            lstUrun.ContextMenuStrip = cmsSil;
             lstUrun.FormattingEnabled = true;
             lstUrun.ItemHeight = 15;
             lstUrun.Location = new Point(332, 34);
@@ -120,21 +127,43 @@
             lstUrun.TabIndex = 6;
             lstUrun.SelectedIndexChanged += lstUrun_SelectedIndexChanged;
             // 
-            // pictureBox1
+            // cmsSil
             // 
-            pictureBox1.BackColor = Color.IndianRed;
-            pictureBox1.Location = new Point(131, 179);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(171, 180);
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
+            cmsSil.Items.AddRange(new ToolStripItem[] { silToolStripMenuItem });
+            cmsSil.Name = "cmsSil";
+            cmsSil.Size = new Size(181, 48);
+            // 
+            // silToolStripMenuItem
+            // 
+            silToolStripMenuItem.Name = "silToolStripMenuItem";
+            silToolStripMenuItem.Size = new Size(180, 22);
+            silToolStripMenuItem.Text = "Sil";
+            silToolStripMenuItem.Click += silToolStripMenuItem_Click;
+            // 
+            // pcFoto
+            // 
+            pcFoto.BackColor = Color.IndianRed;
+            pcFoto.Location = new Point(131, 179);
+            pcFoto.Name = "pcFoto";
+            pcFoto.Size = new Size(171, 180);
+            pcFoto.TabIndex = 7;
+            pcFoto.TabStop = false;
+            pcFoto.Click += pictureBox1_Click;
+            // 
+            // dosyaAc
+            // 
+            dosyaAc.FileName = "dosyaAc";
+            // 
+            // dosyaKaydet
+            // 
+            dosyaKaydet.FileName = "dosyaKaydet";
             // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 512);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(565, 464);
+            Controls.Add(pcFoto);
             Controls.Add(lstUrun);
             Controls.Add(btnGuncelle);
             Controls.Add(btnKaydet);
@@ -147,7 +176,8 @@
             Name = "UrunForm";
             Text = "UrunForm";
             Load += UrunForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            cmsSil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pcFoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,6 +193,10 @@
         private Button btnKaydet;
         private Button btnGuncelle;
         private ListBox lstUrun;
-        private PictureBox pictureBox1;
+        private PictureBox pcFoto;
+        private OpenFileDialog dosyaAc;
+        private SaveFileDialog dosyaKaydet;
+        private ContextMenuStrip cmsSil;
+        private ToolStripMenuItem silToolStripMenuItem;
     }
 }

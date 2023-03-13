@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using CafeOtomasyonu.Data;
+﻿using CafeOtomasyonu.Data;
 using CafeOtomasyonu.Helpers;
 
 namespace CafeOtomasyonu.Forms
@@ -30,9 +20,18 @@ namespace CafeOtomasyonu.Forms
                     Fiyat = txtFiyat.Text,
                     Kategori = (Kategori)cmbKategori.SelectedItem
                 };
+                if (pcFoto.Image != null)
+                {
+                    urun.Fotograf = (byte[])(new ImageConverter().ConvertTo(pcFoto.Image, typeof(byte[])));
+                }
+                else
+                    urun.Fotograf = null;
+
                 DataContext.Urunler.Add(urun);
                 lstUrun.DataSource = null;
                 lstUrun.DataSource = DataContext.Urunler;
+                DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
             }
             catch (Exception ex)
             {
@@ -65,7 +64,37 @@ namespace CafeOtomasyonu.Forms
             urun.Kategori = (Kategori)cmbKategori.SelectedItem;
             lstUrun.DataSource = null;
             lstUrun.DataSource = DataContext.Urunler;
+            DataHelper.Save(DataContext);
+            this.FormCleaner(Controls);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dosyaAc = new OpenFileDialog();
+            dosyaAc.Title = "Resim Seçiniz";
+            dosyaAc.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            dosyaAc.Multiselect = false;
+            dosyaAc.Filter = "Resim Dosyası |*.jpg;*.png;*.jpeg;";
+            if (dosyaAc.ShowDialog() == DialogResult.OK)
+            {
+                pcFoto.Image = Image.FromFile(dosyaAc.FileName);
+            }
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lstUrun.SelectedItem == null) return;
+            var seciliUrun = lstUrun.SelectedItem as Urun;
+            DialogResult result = MessageBox.Show($"{seciliUrun.Ad} ürününü silmek istiyor musunuz?", "Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                DataContext.Urunler.Remove(seciliUrun);
+                lstUrun.DataSource = null;
+                lstUrun.DataSource = DataContext.Urunler;
+            }
+        }
+
+  
     }
 }
