@@ -17,8 +17,10 @@ namespace CafeOtomasyonu.Forms
             foreach (var item in DataContext.Katlar)
             {
                 Button btn = new Button();
-                btn.Text = item.Ad;
-                btn.Size = new Size(180, 50);
+                btn.Text = ($"{item.Ad}.Kat");
+                btn.Size = new Size(150, 50);
+                btn.BackColor = Color.OrangeRed;
+                
                 //btn.Click += KatButon_Click;
                 flpKatBilgisi.Controls.Add(btn);
 
