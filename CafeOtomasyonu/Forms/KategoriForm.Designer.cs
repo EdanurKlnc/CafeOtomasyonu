@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KategoriForm));
             btnGuncelle = new Button();
             lstKategori = new ListBox();
             btnKaydet = new Button();
@@ -37,9 +38,10 @@
             // 
             // btnGuncelle
             // 
-            btnGuncelle.Location = new Point(320, 243);
+            btnGuncelle.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuncelle.Location = new Point(276, 253);
             btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(87, 75);
+            btnGuncelle.Size = new Size(124, 33);
             btnGuncelle.TabIndex = 9;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
@@ -49,17 +51,18 @@
             // 
             lstKategori.FormattingEnabled = true;
             lstKategori.ItemHeight = 15;
-            lstKategori.Location = new Point(424, 21);
+            lstKategori.Location = new Point(431, 85);
             lstKategori.Name = "lstKategori";
-            lstKategori.Size = new Size(234, 409);
+            lstKategori.Size = new Size(140, 304);
             lstKategori.TabIndex = 8;
             lstKategori.SelectedIndexChanged += lstKategori_SelectedIndexChanged;
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(230, 243);
+            btnKaydet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKaydet.Location = new Point(158, 253);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(84, 75);
+            btnKaydet.Size = new Size(124, 33);
             btnKaydet.TabIndex = 7;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
@@ -67,25 +70,28 @@
             // 
             // txtAd
             // 
-            txtAd.Location = new Point(230, 29);
+            txtAd.Location = new Point(265, 183);
             txtAd.Name = "txtAd";
-            txtAd.Size = new Size(177, 23);
+            txtAd.Size = new Size(135, 23);
             txtAd.TabIndex = 6;
             // 
             // lblKategori
             // 
             lblKategori.AutoSize = true;
-            lblKategori.Font = new Font("Georgia", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblKategori.Location = new Point(143, 29);
+            lblKategori.BackColor = Color.Transparent;
+            lblKategori.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            lblKategori.Location = new Point(134, 183);
             lblKategori.Name = "lblKategori";
-            lblKategori.Size = new Size(72, 15);
+            lblKategori.Size = new Size(125, 24);
             lblKategori.TabIndex = 5;
-            lblKategori.Text = "Kategoriler";
+            lblKategori.Text = "Kategoriler :";
             // 
             // KategoriForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(689, 493);
             Controls.Add(btnGuncelle);
             Controls.Add(lstKategori);
