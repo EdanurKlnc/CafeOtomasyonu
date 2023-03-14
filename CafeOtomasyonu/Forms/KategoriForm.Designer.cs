@@ -39,9 +39,9 @@
             // btnGuncelle
             // 
             btnGuncelle.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuncelle.Location = new Point(199, 121);
+            btnGuncelle.Location = new Point(276, 253);
             btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(135, 79);
+            btnGuncelle.Size = new Size(124, 33);
             btnGuncelle.TabIndex = 9;
             btnGuncelle.Text = "Güncelle";
             btnGuncelle.UseVisualStyleBackColor = true;
@@ -51,18 +51,18 @@
             // 
             lstKategori.FormattingEnabled = true;
             lstKategori.ItemHeight = 15;
-            lstKategori.Location = new Point(424, 21);
+            lstKategori.Location = new Point(431, 85);
             lstKategori.Name = "lstKategori";
-            lstKategori.Size = new Size(234, 409);
+            lstKategori.Size = new Size(140, 304);
             lstKategori.TabIndex = 8;
             lstKategori.SelectedIndexChanged += lstKategori_SelectedIndexChanged;
             // 
             // btnKaydet
             // 
             btnKaydet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnKaydet.Location = new Point(38, 125);
+            btnKaydet.Location = new Point(158, 253);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(135, 75);
+            btnKaydet.Size = new Size(124, 33);
             btnKaydet.TabIndex = 7;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
@@ -70,20 +70,21 @@
             // 
             // txtAd
             // 
-            txtAd.Location = new Point(157, 30);
+            txtAd.Location = new Point(265, 183);
             txtAd.Name = "txtAd";
-            txtAd.Size = new Size(177, 23);
+            txtAd.Size = new Size(135, 23);
             txtAd.TabIndex = 6;
             // 
             // lblKategori
             // 
             lblKategori.AutoSize = true;
+            lblKategori.BackColor = Color.Transparent;
             lblKategori.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblKategori.Location = new Point(38, 29);
+            lblKategori.Location = new Point(134, 183);
             lblKategori.Name = "lblKategori";
-            lblKategori.Size = new Size(113, 24);
+            lblKategori.Size = new Size(125, 24);
             lblKategori.TabIndex = 5;
-            lblKategori.Text = "Kategoriler";
+            lblKategori.Text = "Kategoriler :";
             // 
             // KategoriForm
             // 
