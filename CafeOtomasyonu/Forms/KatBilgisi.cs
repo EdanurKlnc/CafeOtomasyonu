@@ -30,7 +30,7 @@ namespace CafeOtomasyonu.Forms
                 lstKat.DataSource = null;
                 lstKat.DataSource = DataContext.Katlar;
                 DataHelper.Save(DataContext);
-                this.FormCleaner(Controls);
+               //this.FormCleaner(Controls);
                 for (int i = 1; i <= kat.MasaSayisi; i++)
                 {
                     Masa masa = new Masa()
@@ -48,7 +48,31 @@ namespace CafeOtomasyonu.Forms
             }
         }
 
+        private void btnGuncele_Click(object sender, EventArgs e)
+        {
+            if (lstKat.SelectedItem == null)
+            {
+                return;
 
+            }
+            Kat seciliKat = (Kat)lstKat.SelectedItem;
+            try
+            {
+                seciliKat.Ad = txtbxKatBilgi.Text;
+                seciliKat.MasaSayisi = Convert.ToInt32(txtMasaSayisi.Text);
+                lstKat.DataSource = null;
+                lstKat.DataSource = DataContext.Katlar;
+                DataHelper.Save(DataContext);
+                this.FormCleaner(Controls);
+      }
+            catch
+            {
+                throw;
+            }
+            
+          
+         
+        }
     }
 }
 

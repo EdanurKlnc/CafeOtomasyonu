@@ -13,6 +13,7 @@ namespace CafeOtomasyonu.Forms
         public EnvanterContext DataContext { get; set; }
         private void AnaMenu_Load(object sender, EventArgs e)
         {
+            //diğer formda eklenen kat bilgisini by formda yazdırma
             foreach (var item in DataContext.Katlar)
             {
                 Button btn = new Button();

@@ -34,6 +34,7 @@
             label2 = new Label();
             txtMasaSayisi = new TextBox();
             lstKat = new ListBox();
+            btnGuncele = new Button();
             SuspendLayout();
             // 
             // txtbxKatBilgi
@@ -56,7 +57,7 @@
             // btnKatUret
             // 
             btnKatUret.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKatUret.Location = new Point(168, 178);
+            btnKatUret.Location = new Point(63, 189);
             btnKatUret.Name = "btnKatUret";
             btnKatUret.Size = new Size(162, 38);
             btnKatUret.TabIndex = 2;
@@ -90,11 +91,22 @@
             lstKat.Size = new Size(181, 184);
             lstKat.TabIndex = 7;
             // 
+            // btnGuncele
+            // 
+            btnGuncele.Location = new Point(231, 189);
+            btnGuncele.Name = "btnGuncele";
+            btnGuncele.Size = new Size(99, 38);
+            btnGuncele.TabIndex = 8;
+            btnGuncele.Text = "Güncelle";
+            btnGuncele.UseVisualStyleBackColor = true;
+            btnGuncele.Click += btnGuncele_Click;
+            // 
             // KatBilgisi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(726, 439);
+            Controls.Add(btnGuncele);
             Controls.Add(lstKat);
             Controls.Add(txtMasaSayisi);
             Controls.Add(label2);
@@ -116,5 +128,6 @@
         private Label label2;
         private TextBox txtMasaSayisi;
         private ListBox lstKat;
+        private Button btnGuncele;
     }
 }
