@@ -80,7 +80,7 @@
             lblKategori.AutoSize = true;
             lblKategori.BackColor = Color.Transparent;
             lblKategori.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblKategori.Location = new Point(134, 183);
+            lblKategori.Location = new Point(134, 182);
             lblKategori.Name = "lblKategori";
             lblKategori.Size = new Size(125, 24);
             lblKategori.TabIndex = 5;

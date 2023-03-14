@@ -10,7 +10,7 @@ namespace CafeOtomasyonu.Forms
             InitializeComponent();
         }
 
-        public List<Kategori> Kategoriler { get; set; } = new();
+        // public List<Kategori> Kategoriler { get; set; } = new();
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             try

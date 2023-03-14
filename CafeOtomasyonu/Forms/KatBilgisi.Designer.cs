@@ -31,14 +31,14 @@
             txtbxKatBilgi = new TextBox();
             label1 = new Label();
             btnKatUret = new Button();
-            btnKat = new Button();
-            flw1 = new FlowLayoutPanel();
-            flw1.SuspendLayout();
+            label2 = new Label();
+            txtMasaSayisi = new TextBox();
+            lstKat = new ListBox();
             SuspendLayout();
             // 
             // txtbxKatBilgi
             // 
-            txtbxKatBilgi.Location = new Point(12, 67);
+            txtbxKatBilgi.Location = new Point(168, 34);
             txtbxKatBilgi.Name = "txtbxKatBilgi";
             txtbxKatBilgi.Size = new Size(162, 23);
             txtbxKatBilgi.TabIndex = 0;
@@ -46,54 +46,64 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Constantia", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 35);
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(44, 31);
             label1.Name = "label1";
-            label1.Size = new Size(141, 18);
+            label1.Size = new Size(117, 19);
             label1.TabIndex = 1;
-            label1.Text = "Kat Sayısı Giriniz :";
+            label1.Text = "Kat Adı Giriniz :";
             // 
             // btnKatUret
             // 
-            btnKatUret.Location = new Point(12, 110);
+            btnKatUret.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKatUret.Location = new Point(168, 178);
             btnKatUret.Name = "btnKatUret";
-            btnKatUret.Size = new Size(116, 79);
+            btnKatUret.Size = new Size(162, 38);
             btnKatUret.TabIndex = 2;
-            btnKatUret.Text = "KAT ÜRET";
+            btnKatUret.Text = "Kaydet";
             btnKatUret.UseVisualStyleBackColor = true;
             btnKatUret.Click += btnKatUret_Click;
             // 
-            // btnKat
+            // label2
             // 
-            btnKat.Location = new Point(3, 3);
-            btnKat.Name = "btnKat";
-            btnKat.Size = new Size(192, 40);
-            btnKat.TabIndex = 2;
-            btnKat.Text = "button1";
-            btnKat.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(12, 85);
+            label2.Name = "label2";
+            label2.Size = new Size(149, 19);
+            label2.TabIndex = 5;
+            label2.Text = "Masa Sayısı Giriniz :";
             // 
-            // flw1
+            // txtMasaSayisi
             // 
-            flw1.AutoScroll = true;
-            flw1.Controls.Add(btnKat);
-            flw1.Location = new Point(194, 12);
-            flw1.Name = "flw1";
-            flw1.Size = new Size(196, 415);
-            flw1.TabIndex = 4;
+            txtMasaSayisi.Location = new Point(168, 81);
+            txtMasaSayisi.Name = "txtMasaSayisi";
+            txtMasaSayisi.Size = new Size(162, 23);
+            txtMasaSayisi.TabIndex = 6;
+            // 
+            // lstKat
+            // 
+            lstKat.FormattingEnabled = true;
+            lstKat.ItemHeight = 15;
+            lstKat.Location = new Point(410, 34);
+            lstKat.Name = "lstKat";
+            lstKat.Size = new Size(181, 184);
+            lstKat.TabIndex = 7;
             // 
             // KatBilgisi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(430, 439);
-            Controls.Add(flw1);
+            ClientSize = new Size(726, 439);
+            Controls.Add(lstKat);
+            Controls.Add(txtMasaSayisi);
+            Controls.Add(label2);
             Controls.Add(btnKatUret);
             Controls.Add(label1);
             Controls.Add(txtbxKatBilgi);
             Name = "KatBilgisi";
             Text = "KatBilgisi";
             Load += KatBilgisi_Load;
-            flw1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -103,7 +113,8 @@
         private TextBox txtbxKatBilgi;
         private Label label1;
         private Button btnKatUret;
-        private Button btnKat;
-        private FlowLayoutPanel flw1;
+        private Label label2;
+        private TextBox txtMasaSayisi;
+        private ListBox lstKat;
     }
 }

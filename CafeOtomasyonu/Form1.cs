@@ -13,6 +13,7 @@ namespace CafeOtomasyonu
         private KategoriForm _kategoriForm;
         private UrunForm _urunForm;
         private EnvanterContext _dataContext;
+        private KatBilgisi _katBilgisi;
 
 
         private void btnKategori_Click(object sender, EventArgs e)
@@ -29,9 +30,16 @@ namespace CafeOtomasyonu
 
         private void btnKat_Click(object sender, EventArgs e)
         {
-            KatBilgisi katBilgisi = new KatBilgisi();
-            katBilgisi.Show();
-            this.Hide();
+            if (_katBilgisi == null || _katBilgisi.IsDisposed)
+            {
+                _katBilgisi = new KatBilgisi();
+                _katBilgisi.Text = "Kat Bilgisi";
+                _katBilgisi.DataContext = _dataContext;
+                _katBilgisi.Show();
+            }
+            /* KatBilgisi katBilgisi = new KatBilgisi();
+             katBilgisi.Show();
+             this.Hide();*/
         }
 
         private void btnUrunler_Click(object sender, EventArgs e)
