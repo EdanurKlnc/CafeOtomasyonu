@@ -95,6 +95,6 @@ namespace CafeOtomasyonu.Forms
             }
         }
 
-  
+
     }
 }
