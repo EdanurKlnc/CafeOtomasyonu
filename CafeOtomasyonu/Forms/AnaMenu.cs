@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
+using CafeOtomasyonu.Data;
 
 namespace CafeOtomasyonu.Forms
 {
@@ -15,6 +8,20 @@ namespace CafeOtomasyonu.Forms
         public AnaMenu()
         {
             InitializeComponent();
+        }
+
+        public EnvanterContext DataContext { get; set; }
+        private void AnaMenu_Load(object sender, EventArgs e)
+        {
+            foreach (var item in DataContext.Katlar)
+            {
+                Button btn = new Button();
+                btn.Text = item.Ad;
+                btn.Size = new Size(180, 50);
+                //btn.Click += KatButon_Click;
+                flpKatBilgisi.Controls.Add(btn);
+
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ namespace CafeOtomasyonu
             InitializeComponent();
         }
         private KategoriForm _kategoriForm;
+        private AnaMenu _anaMenuForm;
         private UrunForm _urunForm;
         private EnvanterContext _dataContext;
         private KatBilgisi _katBilgisi;
@@ -37,9 +38,7 @@ namespace CafeOtomasyonu
                 _katBilgisi.DataContext = _dataContext;
                 _katBilgisi.Show();
             }
-            /* KatBilgisi katBilgisi = new KatBilgisi();
-             katBilgisi.Show();
-             this.Hide();*/
+
         }
 
         private void btnUrunler_Click(object sender, EventArgs e)
@@ -60,7 +59,18 @@ namespace CafeOtomasyonu
             _dataContext = data ?? new();
         }
 
-       
+        private void btnAnasayfa_Click(object sender, EventArgs e)
+        {
+            if (_anaMenuForm== null || _anaMenuForm.IsDisposed)
+            {
+                _anaMenuForm = new AnaMenu();
+                _anaMenuForm.Text = "Kat Bilgisi";
+                _anaMenuForm.DataContext = _dataContext;
+                _anaMenuForm.Show();
+            }
+        }
+
+
         //if (_kategoriForm == null || _kategoriForm.IsDisposed)
         //{
         //    _kategoriForm = new KategoriForm();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             tblAna = new TableLayoutPanel();
-            flpKatlar = new FlowLayoutPanel();
+            flpKatBilgisi = new FlowLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             flpMasalar = new FlowLayoutPanel();
             flwKategoriler = new FlowLayoutPanel();
@@ -42,10 +42,10 @@
             // tblAna
             // 
             tblAna.ColumnCount = 3;
+            tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 23.8335438F));
+            tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.98991F));
             tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
-            tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tblAna.Controls.Add(flpKatlar, 0, 0);
+            tblAna.Controls.Add(flpKatBilgisi, 0, 0);
             tblAna.Controls.Add(tableLayoutPanel1, 1, 0);
             tblAna.Controls.Add(tableLayoutPanel2, 2, 0);
             tblAna.Dock = DockStyle.Fill;
@@ -56,12 +56,12 @@
             tblAna.Size = new Size(793, 499);
             tblAna.TabIndex = 0;
             // 
-            // flpKatlar
+            // flpKatBilgisi
             // 
-            flpKatlar.Location = new Point(3, 3);
-            flpKatlar.Name = "flpKatlar";
-            flpKatlar.Size = new Size(152, 493);
-            flpKatlar.TabIndex = 0;
+            flpKatBilgisi.Location = new Point(3, 3);
+            flpKatBilgisi.Name = "flpKatBilgisi";
+            flpKatBilgisi.Size = new Size(180, 493);
+            flpKatBilgisi.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -71,13 +71,13 @@
             tableLayoutPanel1.Controls.Add(flwKategoriler, 0, 1);
             tableLayoutPanel1.Controls.Add(flpUrunler, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(161, 3);
+            tableLayoutPanel1.Location = new Point(192, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel1.Size = new Size(469, 493);
+            tableLayoutPanel1.Size = new Size(438, 493);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // flpMasalar
@@ -85,7 +85,7 @@
             flpMasalar.Dock = DockStyle.Fill;
             flpMasalar.Location = new Point(3, 3);
             flpMasalar.Name = "flpMasalar";
-            flpMasalar.Size = new Size(463, 191);
+            flpMasalar.Size = new Size(432, 191);
             flpMasalar.TabIndex = 0;
             // 
             // flwKategoriler
@@ -93,7 +93,7 @@
             flwKategoriler.Dock = DockStyle.Fill;
             flwKategoriler.Location = new Point(3, 200);
             flwKategoriler.Name = "flwKategoriler";
-            flwKategoriler.Size = new Size(463, 92);
+            flwKategoriler.Size = new Size(432, 92);
             flwKategoriler.TabIndex = 1;
             // 
             // flpUrunler
@@ -101,7 +101,7 @@
             flpUrunler.Dock = DockStyle.Fill;
             flpUrunler.Location = new Point(3, 298);
             flpUrunler.Name = "flpUrunler";
-            flpUrunler.Size = new Size(463, 192);
+            flpUrunler.Size = new Size(432, 192);
             flpUrunler.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -126,6 +126,7 @@
             Controls.Add(tblAna);
             Name = "AnaMenu";
             Text = "AnaMenu";
+            Load += AnaMenu_Load;
             tblAna.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -134,7 +135,7 @@
         #endregion
 
         private TableLayoutPanel tblAna;
-        private FlowLayoutPanel flpKatlar;
+        private FlowLayoutPanel flpKatBilgisi;
         private TableLayoutPanel tableLayoutPanel1;
         private FlowLayoutPanel flpMasalar;
         private FlowLayoutPanel flwKategoriler;
