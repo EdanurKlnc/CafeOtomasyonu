@@ -30,7 +30,7 @@ namespace CafeOtomasyonu.Forms
                 lstKat.DataSource = null;
                 lstKat.DataSource = DataContext.Katlar;
                 DataHelper.Save(DataContext);
-               //this.FormCleaner(Controls);
+                this.FormCleaner(Controls);
                 for (int i = 1; i <= kat.MasaSayisi; i++)
                 {
                     Masa masa = new Masa()
