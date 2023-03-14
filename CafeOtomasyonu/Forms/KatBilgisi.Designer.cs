@@ -38,7 +38,7 @@
             // 
             // txtbxKatBilgi
             // 
-            txtbxKatBilgi.Location = new Point(202, 35);
+            txtbxKatBilgi.Location = new Point(12, 67);
             txtbxKatBilgi.Name = "txtbxKatBilgi";
             txtbxKatBilgi.Size = new Size(162, 23);
             txtbxKatBilgi.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Constantia", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(42, 40);
+            label1.Location = new Point(12, 35);
             label1.Name = "label1";
             label1.Size = new Size(141, 18);
             label1.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnKatUret
             // 
-            btnKatUret.Location = new Point(42, 101);
+            btnKatUret.Location = new Point(12, 110);
             btnKatUret.Name = "btnKatUret";
             btnKatUret.Size = new Size(116, 79);
             btnKatUret.TabIndex = 2;
@@ -76,16 +76,16 @@
             // 
             flw1.AutoScroll = true;
             flw1.Controls.Add(btnKat);
-            flw1.Location = new Point(400, 35);
+            flw1.Location = new Point(194, 12);
             flw1.Name = "flw1";
-            flw1.Size = new Size(224, 442);
+            flw1.Size = new Size(196, 415);
             flw1.TabIndex = 4;
             // 
             // KatBilgisi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(647, 502);
+            ClientSize = new Size(430, 439);
             Controls.Add(flw1);
             Controls.Add(btnKatUret);
             Controls.Add(label1);
