@@ -32,6 +32,7 @@
             btnKategori = new Button();
             btnKat = new Button();
             btnUrunler = new Button();
+            btnAnasayfa = new Button();
             SuspendLayout();
             // 
             // btnKategori
@@ -64,6 +65,16 @@
             btnUrunler.UseVisualStyleBackColor = true;
             btnUrunler.Click += btnUrunler_Click;
             // 
+            // btnAnasayfa
+            // 
+            btnAnasayfa.Location = new Point(211, 240);
+            btnAnasayfa.Name = "btnAnasayfa";
+            btnAnasayfa.Size = new Size(81, 28);
+            btnAnasayfa.TabIndex = 3;
+            btnAnasayfa.Text = "Anasayfa";
+            btnAnasayfa.UseVisualStyleBackColor = true;
+            btnAnasayfa.Click += btnAnasayfa_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -71,6 +82,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(695, 414);
+            Controls.Add(btnAnasayfa);
             Controls.Add(btnUrunler);
             Controls.Add(btnKat);
             Controls.Add(btnKategori);
@@ -85,5 +97,6 @@
         private Button btnKategori;
         private Button btnKat;
         private Button btnUrunler;
+        private Button btnAnasayfa;
     }
 }
