@@ -17,6 +17,7 @@ namespace CafeOtomasyonu
         private KatBilgisi _katBilgisi;
 
 
+
         private void btnKategori_Click(object sender, EventArgs e)
         {
 

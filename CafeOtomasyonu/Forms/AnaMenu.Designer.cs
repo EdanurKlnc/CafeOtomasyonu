@@ -82,6 +82,7 @@
             // 
             // flpMasalar
             // 
+            flpMasalar.AutoScroll = true;
             flpMasalar.Dock = DockStyle.Fill;
             flpMasalar.Location = new Point(3, 3);
             flpMasalar.Name = "flpMasalar";
