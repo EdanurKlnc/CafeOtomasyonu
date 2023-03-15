@@ -92,6 +92,8 @@ namespace CafeOtomasyonu.Forms
                 DataContext.Urunler.Remove(seciliUrun);
                 lstUrun.DataSource = null;
                 lstUrun.DataSource = DataContext.Urunler;
+                DataHelper.Save(DataContext);
+
             }
         }
 

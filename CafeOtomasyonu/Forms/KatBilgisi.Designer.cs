@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtbxKatBilgi = new TextBox();
             label1 = new Label();
             btnKatUret = new Button();
             label2 = new Label();
             txtMasaSayisi = new TextBox();
             lstKat = new ListBox();
+            cmsSil = new ContextMenuStrip(components);
+            silToolStripMenuItem = new ToolStripMenuItem();
             btnGuncele = new Button();
+            cmsSil.SuspendLayout();
             SuspendLayout();
             // 
             // txtbxKatBilgi
@@ -84,6 +88,7 @@
             // 
             // lstKat
             // 
+            lstKat.ContextMenuStrip = cmsSil;
             lstKat.FormattingEnabled = true;
             lstKat.ItemHeight = 15;
             lstKat.Location = new Point(410, 34);
@@ -91,11 +96,24 @@
             lstKat.Size = new Size(181, 184);
             lstKat.TabIndex = 7;
             // 
+            // cmsSil
+            // 
+            cmsSil.Items.AddRange(new ToolStripItem[] { silToolStripMenuItem });
+            cmsSil.Name = "contextMenuStrip1";
+            cmsSil.Size = new Size(87, 26);
+            // 
+            // silToolStripMenuItem
+            // 
+            silToolStripMenuItem.Name = "silToolStripMenuItem";
+            silToolStripMenuItem.Size = new Size(86, 22);
+            silToolStripMenuItem.Text = "Sil";
+            silToolStripMenuItem.Click += silToolStripMenuItem_Click;
+            // 
             // btnGuncele
             // 
             btnGuncele.Location = new Point(231, 189);
             btnGuncele.Name = "btnGuncele";
-            btnGuncele.Size = new Size(99, 38);
+            btnGuncele.Size = new Size(123, 38);
             btnGuncele.TabIndex = 8;
             btnGuncele.Text = "Güncelle";
             btnGuncele.UseVisualStyleBackColor = true;
@@ -116,6 +134,7 @@
             Name = "KatBilgisi";
             Text = "KatBilgisi";
             Load += KatBilgisi_Load;
+            cmsSil.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,5 +148,7 @@
         private TextBox txtMasaSayisi;
         private ListBox lstKat;
         private Button btnGuncele;
+        private ContextMenuStrip cmsSil;
+        private ToolStripMenuItem silToolStripMenuItem;
     }
 }

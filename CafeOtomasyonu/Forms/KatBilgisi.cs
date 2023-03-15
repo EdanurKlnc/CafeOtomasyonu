@@ -64,15 +64,30 @@ namespace CafeOtomasyonu.Forms
                 lstKat.DataSource = DataContext.Katlar;
                 DataHelper.Save(DataContext);
                 this.FormCleaner(Controls);
-      }
+            }
             catch
             {
                 throw;
             }
-            
-          
-         
         }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lstKat.SelectedItem == null) return;
+            var seciliKat = lstKat.SelectedItem as Kat;
+            DialogResult result = MessageBox.Show($"{seciliKat.Ad} .katı silmek istiyor musunuz?", "Silme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                DataContext.Katlar.Remove(seciliKat);
+                lstKat.DataSource = null;
+                lstKat.DataSource = DataContext.Katlar;
+                DataHelper.Save(DataContext);
+
+            }
+        }
+
+
     }
 }
 
