@@ -24,6 +24,7 @@ namespace CafeOtomasyonu.Forms
                 lstKategori.DataSource = DataContext.Kategoriler;
                 DataHelper.Save(DataContext);
                 this.FormCleaner(Controls);
+               
 
             }
             catch (Exception ex)
@@ -59,6 +60,7 @@ namespace CafeOtomasyonu.Forms
                 lstKategori.DataSource = DataContext.Kategoriler;
                 DataHelper.Save(DataContext);
                 this.FormCleaner(Controls);
+
 
             }
             catch
