@@ -60,10 +60,10 @@
             // 
             // btnKatUret
             // 
-            btnKatUret.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKatUret.Location = new Point(63, 189);
+            btnKatUret.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKatUret.Location = new Point(88, 189);
             btnKatUret.Name = "btnKatUret";
-            btnKatUret.Size = new Size(162, 38);
+            btnKatUret.Size = new Size(137, 38);
             btnKatUret.TabIndex = 2;
             btnKatUret.Text = "Kaydet";
             btnKatUret.UseVisualStyleBackColor = true;
@@ -111,6 +111,7 @@
             // 
             // btnGuncele
             // 
+            btnGuncele.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnGuncele.Location = new Point(231, 189);
             btnGuncele.Name = "btnGuncele";
             btnGuncele.Size = new Size(123, 38);
@@ -123,7 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(726, 439);
+            ClientSize = new Size(768, 427);
             Controls.Add(btnGuncele);
             Controls.Add(lstKat);
             Controls.Add(txtMasaSayisi);
