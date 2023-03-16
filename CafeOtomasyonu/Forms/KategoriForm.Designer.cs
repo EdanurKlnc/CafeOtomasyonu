@@ -60,6 +60,7 @@
             // btnKaydet
             // 
             btnKaydet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKaydet.ForeColor = SystemColors.ActiveCaptionText;
             btnKaydet.Location = new Point(158, 253);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new Size(124, 33);

@@ -32,7 +32,7 @@
             flpKatBilgisi = new FlowLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             flpMasalar = new FlowLayoutPanel();
-            flwKategoriler = new FlowLayoutPanel();
+            flpKategoriler = new FlowLayoutPanel();
             flpUrunler = new FlowLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             tblAna.SuspendLayout();
@@ -68,7 +68,7 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(flpMasalar, 0, 0);
-            tableLayoutPanel1.Controls.Add(flwKategoriler, 0, 1);
+            tableLayoutPanel1.Controls.Add(flpKategoriler, 0, 1);
             tableLayoutPanel1.Controls.Add(flpUrunler, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(192, 3);
@@ -89,13 +89,13 @@
             flpMasalar.Size = new Size(432, 191);
             flpMasalar.TabIndex = 0;
             // 
-            // flwKategoriler
+            // flpKategoriler
             // 
-            flwKategoriler.Dock = DockStyle.Fill;
-            flwKategoriler.Location = new Point(3, 200);
-            flwKategoriler.Name = "flwKategoriler";
-            flwKategoriler.Size = new Size(432, 92);
-            flwKategoriler.TabIndex = 1;
+            flpKategoriler.Dock = DockStyle.Fill;
+            flpKategoriler.Location = new Point(3, 200);
+            flpKategoriler.Name = "flpKategoriler";
+            flpKategoriler.Size = new Size(432, 92);
+            flpKategoriler.TabIndex = 1;
             // 
             // flpUrunler
             // 
@@ -139,7 +139,7 @@
         private FlowLayoutPanel flpKatBilgisi;
         private TableLayoutPanel tableLayoutPanel1;
         private FlowLayoutPanel flpMasalar;
-        private FlowLayoutPanel flwKategoriler;
+        private FlowLayoutPanel flpKategoriler;
         private FlowLayoutPanel flpUrunler;
         private TableLayoutPanel tableLayoutPanel2;
     }
