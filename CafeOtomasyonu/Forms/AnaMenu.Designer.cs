@@ -58,10 +58,9 @@
             // 
             // flpKatBilgisi
             // 
-            flpKatBilgisi.Dock = DockStyle.Fill;
             flpKatBilgisi.Location = new Point(3, 3);
             flpKatBilgisi.Name = "flpKatBilgisi";
-            flpKatBilgisi.Size = new Size(171, 480);
+            flpKatBilgisi.Size = new Size(147, 453);
             flpKatBilgisi.TabIndex = 0;
             // 
             // tableLayoutPanel1
