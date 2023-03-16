@@ -34,6 +34,8 @@ namespace CafeOtomasyonu.Forms
         private void MasaOlustur(object? sender, EventArgs e)
         {
             flpMasalar.Controls.Clear();
+            flpKategoriler.Controls.Clear();
+            flpUrunler.Controls.Clear();
 
             var tiklananKat = ((Button)sender).Text.Substring(0, 1);
 
@@ -41,8 +43,6 @@ namespace CafeOtomasyonu.Forms
             {
                 if (item.BulunduguKat.Ad == tiklananKat)
                 {
-
-
                     Button btnMasa = new Button();
                     btnMasa.Name = item.Id.ToString();
                     btnMasa.Text = ($"{item.Ad}");
@@ -58,9 +58,9 @@ namespace CafeOtomasyonu.Forms
 
         private void KategoriGetir(object? sender, EventArgs e)
         {
+            flpUrunler.Controls.Clear();
             foreach (var item in DataContext.Kategoriler)
             {
-                flpKategoriler.Controls.Clear();
 
                 Button btnKategori = new Button();
                 btnKategori.Click += UrunGetir;
@@ -73,9 +73,9 @@ namespace CafeOtomasyonu.Forms
 
         private void UrunGetir(object? sender, EventArgs e)
         {
+            flpUrunler.Controls.Clear();
             foreach (var item in DataContext.Urunler)
             {
-
                 Button btnUrunler = new Button();
                 btnUrunler.Text = ($"{item.Ad}");
                 btnUrunler.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point);
