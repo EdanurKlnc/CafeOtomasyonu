@@ -11,8 +11,6 @@ namespace CafeOtomasyonu.Forms
         }
 
         public EnvanterContext DataContext { get; set; }
-
-
         private void AnaMenu_Load(object sender, EventArgs e)
         {
             flpMasalar.Controls.Clear();
@@ -22,8 +20,8 @@ namespace CafeOtomasyonu.Forms
             {
                 Button btn = new Button();
                 btn.Text = ($"{item.Ad}.Kat");
-                btn.Size = new Size(150, 50);
-                btn.BackColor = Color.OrangeRed;
+                btn.Size = new Size(160, 55);
+                btn.BackColor = Color.AliceBlue;
                 btn.Font = new Font("Segoe Print", 16F, FontStyle.Regular, GraphicsUnit.Point);
                 flpKatBilgisi.Controls.Add(btn);
                 btn.Click += MasaOlustur; //kata tıklandığında masa oluşturacak
@@ -61,7 +59,6 @@ namespace CafeOtomasyonu.Forms
             flpUrunler.Controls.Clear();
             foreach (var item in DataContext.Kategoriler)
             {
-
                 Button btnKategori = new Button();
                 btnKategori.Click += UrunGetir;
                 btnKategori.Text = ($"{item.Ad}");
@@ -74,17 +71,22 @@ namespace CafeOtomasyonu.Forms
         private void UrunGetir(object? sender, EventArgs e)
         {
             flpUrunler.Controls.Clear();
+            var tiklananKategori = ((Button)sender).Text;
+
             foreach (var item in DataContext.Urunler)
             {
-                Button btnUrunler = new Button();
-                btnUrunler.Text = ($"{item.Ad}");
-                btnUrunler.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point);
-                btnUrunler.ForeColor = Color.White;
-                btnUrunler.BackgroundImage = (Image)(new ImageConverter().ConvertFrom(item.Fotograf));
-                btnUrunler.BackgroundImageLayout = ImageLayout.Stretch;
-                btnUrunler.Size = new Size(150, 150);
-                btnUrunler.BackColor = Color.Pink;
-                flpUrunler.Controls.Add(btnUrunler);
+                if (item.Kategori.Ad == tiklananKategori)
+                {
+                    Button btnUrunler = new Button();
+                    btnUrunler.Text = ($"{item.Ad}");
+                    btnUrunler.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point);
+                    btnUrunler.ForeColor = Color.White;
+                    btnUrunler.BackgroundImage = (Image)(new ImageConverter().ConvertFrom(item.Fotograf));
+                    btnUrunler.BackgroundImageLayout = ImageLayout.Stretch;
+                    btnUrunler.Size = new Size(100, 100);
+                    btnUrunler.BackColor = Color.Pink;
+                    flpUrunler.Controls.Add(btnUrunler);
+                }
             }
         }
     }
