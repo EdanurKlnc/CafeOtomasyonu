@@ -34,9 +34,11 @@
             flpMasalar = new FlowLayoutPanel();
             flpKategoriler = new FlowLayoutPanel();
             flpUrunler = new FlowLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
+            tblHesap = new TableLayoutPanel();
+            label1 = new Label();
             tblAna.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            tblHesap.SuspendLayout();
             SuspendLayout();
             // 
             // tblAna
@@ -47,7 +49,7 @@
             tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tblAna.Controls.Add(flpKatBilgisi, 0, 0);
             tblAna.Controls.Add(tableLayoutPanel1, 1, 0);
-            tblAna.Controls.Add(tableLayoutPanel2, 2, 0);
+            tblAna.Controls.Add(tblHesap, 2, 0);
             tblAna.Dock = DockStyle.Fill;
             tblAna.Location = new Point(0, 0);
             tblAna.Name = "tblAna";
@@ -109,18 +111,28 @@
             flpUrunler.Size = new Size(404, 186);
             flpUrunler.TabIndex = 2;
             // 
-            // tableLayoutPanel2
+            // tblHesap
             // 
-            tableLayoutPanel2.ColumnCount = 1;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(596, 3);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel2.Size = new Size(144, 480);
-            tableLayoutPanel2.TabIndex = 2;
+            tblHesap.ColumnCount = 1;
+            tblHesap.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblHesap.Controls.Add(label1, 0, 0);
+            tblHesap.Dock = DockStyle.Fill;
+            tblHesap.Location = new Point(596, 3);
+            tblHesap.Name = "tblHesap";
+            tblHesap.RowCount = 2;
+            tblHesap.RowStyles.Add(new RowStyle(SizeType.Percent, 17.5F));
+            tblHesap.RowStyles.Add(new RowStyle(SizeType.Percent, 82.5F));
+            tblHesap.Size = new Size(144, 480);
+            tblHesap.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(123, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Sipariş edilen ürünler :";
             // 
             // AnaMenu
             // 
@@ -134,6 +146,8 @@
             Load += AnaMenu_Load;
             tblAna.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
+            tblHesap.ResumeLayout(false);
+            tblHesap.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -145,6 +159,7 @@
         private FlowLayoutPanel flpMasalar;
         private FlowLayoutPanel flpKategoriler;
         private FlowLayoutPanel flpUrunler;
-        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel tblHesap;
+        private Label label1;
     }
 }

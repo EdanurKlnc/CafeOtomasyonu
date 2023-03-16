@@ -1,5 +1,4 @@
-﻿
-using CafeOtomasyonu.Data;
+﻿using CafeOtomasyonu.Data;
 
 namespace CafeOtomasyonu.Forms
 {
@@ -86,8 +85,21 @@ namespace CafeOtomasyonu.Forms
                     btnUrunler.Size = new Size(100, 100);
                     btnUrunler.BackColor = Color.Pink;
                     flpUrunler.Controls.Add(btnUrunler);
+                    btnUrunler.Click += FiyatListele;
                 }
             }
+        }
+
+        private void FiyatListele(object? sender, EventArgs e)
+        {
+            foreach (var item in DataContext.Urunler)
+            {
+                Label lblFiyat = new Label();
+                lblFiyat.Text = ($"{item.Ad} : {item.Fiyat}");
+                tblHesap.Controls.Add(lblFiyat);
+
+            }
+
         }
     }
 }
