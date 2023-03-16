@@ -34,7 +34,7 @@ namespace CafeOtomasyonu.Forms
         private void MasaOlustur(object? sender, EventArgs e)
         {
             flpMasalar.Controls.Clear();
-            
+
             var tiklananKat = ((Button)sender).Text.Substring(0, 1);
 
             foreach (var item in DataContext.Masalar)
