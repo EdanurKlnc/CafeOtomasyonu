@@ -58,9 +58,10 @@
             // 
             // flpKatBilgisi
             // 
+            flpKatBilgisi.BackColor = SystemColors.ActiveBorder;
             flpKatBilgisi.Location = new Point(3, 3);
             flpKatBilgisi.Name = "flpKatBilgisi";
-            flpKatBilgisi.Size = new Size(147, 453);
+            flpKatBilgisi.Size = new Size(171, 453);
             flpKatBilgisi.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -83,6 +84,7 @@
             // flpMasalar
             // 
             flpMasalar.AutoScroll = true;
+            flpMasalar.BackColor = Color.FromArgb(255, 192, 192);
             flpMasalar.Dock = DockStyle.Fill;
             flpMasalar.Location = new Point(3, 3);
             flpMasalar.Name = "flpMasalar";
@@ -91,6 +93,7 @@
             // 
             // flpKategoriler
             // 
+            flpKategoriler.BackColor = Color.FromArgb(192, 255, 192);
             flpKategoriler.Dock = DockStyle.Fill;
             flpKategoriler.Location = new Point(3, 195);
             flpKategoriler.Name = "flpKategoriler";
@@ -99,6 +102,7 @@
             // 
             // flpUrunler
             // 
+            flpUrunler.BackColor = Color.White;
             flpUrunler.Dock = DockStyle.Fill;
             flpUrunler.Location = new Point(3, 291);
             flpUrunler.Name = "flpUrunler";

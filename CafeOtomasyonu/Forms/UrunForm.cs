@@ -43,8 +43,7 @@ namespace CafeOtomasyonu.Forms
         {
             cmbKategori.DataSource = DataContext.Kategoriler;
             lstUrun.DataSource = DataContext.Urunler;
-
-        }
+ }
 
         private void lstUrun_SelectedIndexChanged(object sender, EventArgs e)
         {
