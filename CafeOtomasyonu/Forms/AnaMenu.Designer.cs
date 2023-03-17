@@ -35,16 +35,12 @@
             flpKategoriler = new FlowLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             flpUrunler = new FlowLayoutPanel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            tblSipariş = new TableLayoutPanel();
+            tblSiparis = new TableLayoutPanel();
             label1 = new Label();
             tblAna.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             flpKategoriler.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
-            tblSipariş.SuspendLayout();
+            tblSiparis.SuspendLayout();
             SuspendLayout();
             // 
             // tblAna
@@ -55,7 +51,7 @@
             tblAna.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.8562012F));
             tblAna.Controls.Add(flpKatBilgisi, 0, 0);
             tblAna.Controls.Add(tableLayoutPanel1, 1, 0);
-            tblAna.Controls.Add(flowLayoutPanel1, 2, 0);
+            tblAna.Controls.Add(tblSiparis, 2, 0);
             tblAna.Dock = DockStyle.Fill;
             tblAna.Location = new Point(0, 0);
             tblAna.Name = "tblAna";
@@ -132,48 +128,27 @@
             flpUrunler.Size = new Size(491, 186);
             flpUrunler.TabIndex = 2;
             // 
-            // flowLayoutPanel1
+            // tblSiparis
             // 
-            flowLayoutPanel1.Controls.Add(tableLayoutPanel3);
-            flowLayoutPanel1.Location = new Point(723, 3);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(185, 480);
-            flowLayoutPanel1.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.ColumnCount = 1;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(tblSipariş, 0, 0);
-            tableLayoutPanel3.Location = new Point(3, 3);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(179, 474);
-            tableLayoutPanel3.TabIndex = 1;
-            // 
-            // tblSipariş
-            // 
-            tblSipariş.AutoScroll = true;
-            tblSipariş.ColumnCount = 1;
-            tblSipariş.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tblSipariş.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tblSipariş.Controls.Add(label1, 0, 0);
-            tblSipariş.Location = new Point(3, 3);
-            tblSipariş.Name = "tblSipariş";
-            tblSipariş.RowCount = 1;
-            tblSipariş.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblSipariş.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tblSipariş.Size = new Size(173, 183);
-            tblSipariş.TabIndex = 0;
+            tblSiparis.ColumnCount = 1;
+            tblSiparis.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tblSiparis.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tblSiparis.Controls.Add(label1, 0, 0);
+            tblSiparis.Location = new Point(723, 3);
+            tblSiparis.Name = "tblSiparis";
+            tblSiparis.RowCount = 1;
+            tblSiparis.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tblSiparis.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tblSiparis.Size = new Size(185, 166);
+            tblSiparis.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(127, 15);
+            label1.Size = new Size(154, 17);
             label1.TabIndex = 0;
             label1.Text = "Sipariş Verilen Ürünler :";
             // 
@@ -190,10 +165,8 @@
             tblAna.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             flpKategoriler.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel3.ResumeLayout(false);
-            tblSipariş.ResumeLayout(false);
-            tblSipariş.PerformLayout();
+            tblSiparis.ResumeLayout(false);
+            tblSiparis.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -206,9 +179,7 @@
         private FlowLayoutPanel flpKategoriler;
         private FlowLayoutPanel flpUrunler;
         private TableLayoutPanel tableLayoutPanel2;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private TableLayoutPanel tableLayoutPanel3;
-        private TableLayoutPanel tblSipariş;
         private Label label1;
+        private TableLayoutPanel tblSiparis;
     }
 }

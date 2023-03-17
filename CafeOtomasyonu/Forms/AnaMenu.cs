@@ -10,10 +10,13 @@ namespace CafeOtomasyonu.Forms
         }
 
         public EnvanterContext DataContext { get; set; }
+
         private void AnaMenu_Load(object sender, EventArgs e)
         {
-            flpMasalar.Controls.Clear();
+            //flpMasalar.Controls.Clear();
             flpKategoriler.Controls.Clear();
+            tblSiparis.Controls.Clear();
+
             //diğer formda eklenen kat bilgisini bu formda yazdırma
             foreach (var item in DataContext.Katlar)
             {
@@ -33,6 +36,8 @@ namespace CafeOtomasyonu.Forms
             flpMasalar.Controls.Clear();
             flpKategoriler.Controls.Clear();
             flpUrunler.Controls.Clear();
+            tblSiparis.Controls.Clear();
+
 
             var tiklananKat = ((Button)sender).Text.Substring(0, 1);
 
@@ -48,16 +53,22 @@ namespace CafeOtomasyonu.Forms
                     btnMasa.BackColor = Color.Silver;
                     btnMasa.Click += KategoriGetir;
                     flpMasalar.Controls.Add(btnMasa);
+
                 }
 
             }
+
         }
 
         private void KategoriGetir(object? sender, EventArgs e)
         {
             flpUrunler.Controls.Clear();
+            flpKategoriler.Controls.Clear();
+            tblSiparis.Controls.Clear();
+
             foreach (var item in DataContext.Kategoriler)
             {
+                ((Button)sender).BackColor = Color.BlueViolet; //butona tıkladığında masanın rengini değiştirecek
                 Button btnKategori = new Button();
                 btnKategori.Click += UrunGetir;
                 btnKategori.Text = ($"{item.Ad}");
@@ -74,6 +85,8 @@ namespace CafeOtomasyonu.Forms
 
             foreach (var item in DataContext.Urunler)
             {
+                ((Button)sender).BackColor = Color.PaleGreen; //butona tıkladığında masanın rengini değiştirecek
+
                 if (item.Kategori.Ad == tiklananKategori)
                 {
                     Button btnUrunler = new Button();
@@ -101,14 +114,16 @@ namespace CafeOtomasyonu.Forms
 
                     Label lblFiyat = new Label();
                     lblFiyat.Text = ($"{item.Ad} : {item.Fiyat}");
-                    tblSipariş.Controls.Add(lblFiyat);
-
+                    tblSiparis.Controls.Add(lblFiyat);
                 }
-            }
 
+
+            }
         }
+
     }
 }
+
 
 /*
       private void MasaOlustur(object? sender, EventArgs e)
