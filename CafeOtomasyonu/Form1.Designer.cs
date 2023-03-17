@@ -37,11 +37,11 @@
             // 
             // btnKategori
             // 
-            btnKategori.BackColor = Color.White;
-            btnKategori.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnKategori.Location = new Point(74, 165);
+            btnKategori.BackColor = Color.SandyBrown;
+            btnKategori.Font = new Font("Segoe Print", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnKategori.Location = new Point(445, 132);
             btnKategori.Name = "btnKategori";
-            btnKategori.Size = new Size(127, 39);
+            btnKategori.Size = new Size(178, 61);
             btnKategori.TabIndex = 0;
             btnKategori.Text = "Kategori";
             btnKategori.UseVisualStyleBackColor = false;
@@ -49,11 +49,11 @@
             // 
             // btnKat
             // 
-            btnKat.BackColor = Color.White;
-            btnKat.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnKat.Location = new Point(74, 219);
+            btnKat.BackColor = Color.SandyBrown;
+            btnKat.Font = new Font("Segoe Print", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnKat.Location = new Point(517, 219);
             btnKat.Name = "btnKat";
-            btnKat.Size = new Size(127, 39);
+            btnKat.Size = new Size(178, 61);
             btnKat.TabIndex = 1;
             btnKat.Text = "Kat";
             btnKat.UseVisualStyleBackColor = false;
@@ -61,11 +61,12 @@
             // 
             // btnUrunler
             // 
-            btnUrunler.BackColor = Color.White;
-            btnUrunler.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnUrunler.Location = new Point(74, 275);
+            btnUrunler.BackColor = Color.SandyBrown;
+            btnUrunler.Font = new Font("Segoe Print", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnUrunler.ForeColor = SystemColors.ControlText;
+            btnUrunler.Location = new Point(601, 304);
             btnUrunler.Name = "btnUrunler";
-            btnUrunler.Size = new Size(127, 39);
+            btnUrunler.Size = new Size(178, 61);
             btnUrunler.TabIndex = 2;
             btnUrunler.Text = "Ürünler";
             btnUrunler.UseVisualStyleBackColor = false;
@@ -73,14 +74,14 @@
             // 
             // btnAnasayfa
             // 
-            btnAnasayfa.BackColor = Color.SaddleBrown;
-            btnAnasayfa.Font = new Font("Segoe Print", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAnasayfa.ForeColor = Color.White;
-            btnAnasayfa.Location = new Point(64, 78);
+            btnAnasayfa.BackColor = Color.Chocolate;
+            btnAnasayfa.Font = new Font("Segoe Print", 18F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point);
+            btnAnasayfa.ForeColor = Color.Black;
+            btnAnasayfa.Location = new Point(358, 48);
             btnAnasayfa.Name = "btnAnasayfa";
-            btnAnasayfa.Size = new Size(147, 66);
+            btnAnasayfa.Size = new Size(178, 61);
             btnAnasayfa.TabIndex = 3;
-            btnAnasayfa.Text = "Anasayfa";
+            btnAnasayfa.Text = "ANASAYFA";
             btnAnasayfa.UseVisualStyleBackColor = false;
             btnAnasayfa.Click += btnAnasayfa_Click;
             // 
@@ -90,7 +91,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(695, 414);
+            ClientSize = new Size(811, 407);
             Controls.Add(btnAnasayfa);
             Controls.Add(btnUrunler);
             Controls.Add(btnKat);
