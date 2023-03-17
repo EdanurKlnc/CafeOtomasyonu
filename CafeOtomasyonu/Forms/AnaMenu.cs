@@ -78,8 +78,8 @@ namespace CafeOtomasyonu.Forms
                 {
                     Button btnUrunler = new Button();
                     btnUrunler.Text = ($"{item.Ad}");
-                    btnUrunler.Font = new Font("Times New Roman", 20F, FontStyle.Regular, GraphicsUnit.Point);
-                    btnUrunler.ForeColor = Color.White;
+                    btnUrunler.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point);
+                    btnUrunler.ForeColor = Color.Black;
                     btnUrunler.BackgroundImage = (Image)(new ImageConverter().ConvertFrom(item.Fotograf));
                     btnUrunler.BackgroundImageLayout = ImageLayout.Stretch;
                     btnUrunler.Size = new Size(100, 100);
@@ -92,12 +92,18 @@ namespace CafeOtomasyonu.Forms
 
         private void FiyatListele(object? sender, EventArgs e)
         {
+            var tiklananUrun = ((Button)sender).Text;
+
             foreach (var item in DataContext.Urunler)
             {
-                Label lblFiyat = new Label();
-                lblFiyat.Text = ($"{item.Ad} : {item.Fiyat}");
-                tblHesap.Controls.Add(lblFiyat);
+                if (item.Ad == tiklananUrun)
+                {
 
+                    Label lblFiyat = new Label();
+                    lblFiyat.Text = ($"{item.Ad} : {item.Fiyat}");
+                    tblSipariş.Controls.Add(lblFiyat);
+
+                }
             }
 
         }
