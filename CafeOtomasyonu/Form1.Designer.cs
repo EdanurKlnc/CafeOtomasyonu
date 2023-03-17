@@ -37,42 +37,51 @@
             // 
             // btnKategori
             // 
-            btnKategori.Location = new Point(211, 72);
+            btnKategori.BackColor = Color.White;
+            btnKategori.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnKategori.Location = new Point(74, 165);
             btnKategori.Name = "btnKategori";
-            btnKategori.Size = new Size(81, 32);
+            btnKategori.Size = new Size(127, 39);
             btnKategori.TabIndex = 0;
             btnKategori.Text = "Kategori";
-            btnKategori.UseVisualStyleBackColor = true;
+            btnKategori.UseVisualStyleBackColor = false;
             btnKategori.Click += btnKategori_Click;
             // 
             // btnKat
             // 
-            btnKat.Location = new Point(211, 126);
+            btnKat.BackColor = Color.White;
+            btnKat.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnKat.Location = new Point(74, 219);
             btnKat.Name = "btnKat";
-            btnKat.Size = new Size(81, 32);
+            btnKat.Size = new Size(127, 39);
             btnKat.TabIndex = 1;
             btnKat.Text = "Kat";
-            btnKat.UseVisualStyleBackColor = true;
+            btnKat.UseVisualStyleBackColor = false;
             btnKat.Click += btnKat_Click;
             // 
             // btnUrunler
             // 
-            btnUrunler.Location = new Point(211, 182);
+            btnUrunler.BackColor = Color.White;
+            btnUrunler.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnUrunler.Location = new Point(74, 275);
             btnUrunler.Name = "btnUrunler";
-            btnUrunler.Size = new Size(81, 32);
+            btnUrunler.Size = new Size(127, 39);
             btnUrunler.TabIndex = 2;
-            btnUrunler.Text = "ürünler";
-            btnUrunler.UseVisualStyleBackColor = true;
+            btnUrunler.Text = "Ürünler";
+            btnUrunler.UseVisualStyleBackColor = false;
             btnUrunler.Click += btnUrunler_Click;
             // 
             // btnAnasayfa
             // 
-            btnAnasayfa.Location = new Point(211, 240);
+            btnAnasayfa.BackColor = Color.SaddleBrown;
+            btnAnasayfa.Font = new Font("Segoe Print", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAnasayfa.ForeColor = Color.White;
+            btnAnasayfa.Location = new Point(64, 78);
             btnAnasayfa.Name = "btnAnasayfa";
-            btnAnasayfa.Size = new Size(81, 28);
+            btnAnasayfa.Size = new Size(147, 66);
             btnAnasayfa.TabIndex = 3;
             btnAnasayfa.Text = "Anasayfa";
-            btnAnasayfa.UseVisualStyleBackColor = true;
+            btnAnasayfa.UseVisualStyleBackColor = false;
             btnAnasayfa.Click += btnAnasayfa_Click;
             // 
             // Form1

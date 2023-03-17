@@ -71,5 +71,10 @@ namespace CafeOtomasyonu.Forms
         {
             lstKategori.DataSource = DataContext.Kategoriler;
         }
+
+        private void txtAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

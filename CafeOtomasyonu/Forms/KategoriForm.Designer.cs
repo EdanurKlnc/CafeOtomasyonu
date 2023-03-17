@@ -38,20 +38,21 @@
             // 
             // btnGuncelle
             // 
-            btnGuncelle.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuncelle.Location = new Point(276, 253);
+            btnGuncelle.BackColor = SystemColors.ActiveCaption;
+            btnGuncelle.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGuncelle.Location = new Point(174, 258);
             btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(124, 33);
+            btnGuncelle.Size = new Size(247, 37);
             btnGuncelle.TabIndex = 9;
             btnGuncelle.Text = "Güncelle";
-            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.UseVisualStyleBackColor = false;
             btnGuncelle.Click += btnGuncelle_Click;
             // 
             // lstKategori
             // 
             lstKategori.FormattingEnabled = true;
             lstKategori.ItemHeight = 15;
-            lstKategori.Location = new Point(431, 85);
+            lstKategori.Location = new Point(455, 89);
             lstKategori.Name = "lstKategori";
             lstKategori.Size = new Size(140, 304);
             lstKategori.TabIndex = 8;
@@ -59,31 +60,33 @@
             // 
             // btnKaydet
             // 
-            btnKaydet.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKaydet.BackColor = Color.White;
+            btnKaydet.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnKaydet.ForeColor = SystemColors.ActiveCaptionText;
-            btnKaydet.Location = new Point(158, 253);
+            btnKaydet.Location = new Point(174, 309);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(124, 33);
+            btnKaydet.Size = new Size(247, 37);
             btnKaydet.TabIndex = 7;
             btnKaydet.Text = "Kaydet";
-            btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.UseVisualStyleBackColor = false;
             btnKaydet.Click += btnKaydet_Click;
             // 
             // txtAd
             // 
-            txtAd.Location = new Point(265, 183);
+            txtAd.Location = new Point(296, 185);
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(135, 23);
             txtAd.TabIndex = 6;
+            txtAd.TextChanged += txtAd_TextChanged;
             // 
             // lblKategori
             // 
             lblKategori.AutoSize = true;
             lblKategori.BackColor = Color.Transparent;
-            lblKategori.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblKategori.Location = new Point(134, 182);
+            lblKategori.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblKategori.Location = new Point(161, 186);
             lblKategori.Name = "lblKategori";
-            lblKategori.Size = new Size(125, 24);
+            lblKategori.Size = new Size(120, 24);
             lblKategori.TabIndex = 5;
             lblKategori.Text = "Kategoriler :";
             // 

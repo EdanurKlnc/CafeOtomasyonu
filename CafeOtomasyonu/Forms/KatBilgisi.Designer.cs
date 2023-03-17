@@ -43,37 +43,38 @@
             // 
             // txtbxKatBilgi
             // 
-            txtbxKatBilgi.Location = new Point(168, 34);
+            txtbxKatBilgi.Location = new Point(172, 57);
             txtbxKatBilgi.Name = "txtbxKatBilgi";
-            txtbxKatBilgi.Size = new Size(162, 23);
+            txtbxKatBilgi.Size = new Size(147, 23);
             txtbxKatBilgi.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(44, 31);
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(48, 54);
             label1.Name = "label1";
-            label1.Size = new Size(117, 19);
+            label1.Size = new Size(121, 19);
             label1.TabIndex = 1;
             label1.Text = "Kat Adı Giriniz :";
             // 
             // btnKatUret
             // 
-            btnKatUret.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKatUret.Location = new Point(88, 189);
+            btnKatUret.BackColor = Color.White;
+            btnKatUret.Font = new Font("Segoe UI Emoji", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnKatUret.Location = new Point(135, 239);
             btnKatUret.Name = "btnKatUret";
-            btnKatUret.Size = new Size(137, 38);
+            btnKatUret.Size = new Size(219, 38);
             btnKatUret.TabIndex = 2;
             btnKatUret.Text = "Kaydet";
-            btnKatUret.UseVisualStyleBackColor = true;
+            btnKatUret.UseVisualStyleBackColor = false;
             btnKatUret.Click += btnKatUret_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(12, 85);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(16, 108);
             label2.Name = "label2";
             label2.Size = new Size(149, 19);
             label2.TabIndex = 5;
@@ -81,9 +82,9 @@
             // 
             // txtMasaSayisi
             // 
-            txtMasaSayisi.Location = new Point(168, 81);
+            txtMasaSayisi.Location = new Point(172, 104);
             txtMasaSayisi.Name = "txtMasaSayisi";
-            txtMasaSayisi.Size = new Size(162, 23);
+            txtMasaSayisi.Size = new Size(147, 23);
             txtMasaSayisi.TabIndex = 6;
             // 
             // lstKat
@@ -91,9 +92,9 @@
             lstKat.ContextMenuStrip = cmsSil;
             lstKat.FormattingEnabled = true;
             lstKat.ItemHeight = 15;
-            lstKat.Location = new Point(410, 34);
+            lstKat.Location = new Point(384, 54);
             lstKat.Name = "lstKat";
-            lstKat.Size = new Size(181, 184);
+            lstKat.Size = new Size(219, 214);
             lstKat.TabIndex = 7;
             // 
             // cmsSil
@@ -111,19 +112,21 @@
             // 
             // btnGuncele
             // 
-            btnGuncele.Font = new Font("Segoe UI Emoji", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btnGuncele.Location = new Point(231, 189);
+            btnGuncele.BackColor = Color.FromArgb(128, 128, 255);
+            btnGuncele.Font = new Font("Segoe UI Emoji", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGuncele.Location = new Point(135, 180);
             btnGuncele.Name = "btnGuncele";
-            btnGuncele.Size = new Size(123, 38);
+            btnGuncele.Size = new Size(219, 38);
             btnGuncele.TabIndex = 8;
             btnGuncele.Text = "Güncelle";
-            btnGuncele.UseVisualStyleBackColor = true;
+            btnGuncele.UseVisualStyleBackColor = false;
             btnGuncele.Click += btnGuncele_Click;
             // 
             // KatBilgisi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(768, 427);
             Controls.Add(btnGuncele);
             Controls.Add(lstKat);

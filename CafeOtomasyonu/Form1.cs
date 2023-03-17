@@ -62,7 +62,7 @@ namespace CafeOtomasyonu
 
         private void btnAnasayfa_Click(object sender, EventArgs e)
         {
-            if (_anaMenuForm== null || _anaMenuForm.IsDisposed)
+            if (_anaMenuForm == null || _anaMenuForm.IsDisposed)
             {
                 _anaMenuForm = new AnaMenu();
                 _anaMenuForm.Text = "Kat Bilgisi";
