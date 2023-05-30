@@ -1,1 +1,2 @@
 # CafeOtomasyonu
+Cafe Otomasyon Projesi Visual Studio ortamında geliştirilmiş Form uygulamasıdır. Projenin amacı kafe veya restaurantların sipariş alımını sisteme dökmektir. Kullanıcı bağımsız olarak geliştirilmiş, kullanıcıların kendi işletme adları, kat bilgileri, masa sayıları, ürünleri, ürün fiyatları gibi bilgileri girilmesi beklenmiştir. Bu sayede farklı kullanıcıların kendi işletmelerinde kullanmalarına olanak sağlanmıştır. Projede işletme bilgileri girildikten sonra garsonlar sipariş almakta ve aldıkları siparişleri bu uygulama aracıyla kontrol edebilmektedir.
